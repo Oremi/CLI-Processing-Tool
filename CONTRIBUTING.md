@@ -32,8 +32,3 @@ go test ./...
 - Problem statement
 - Approach and reasoning
 - Test coverage details
-
-## Notes
-
-- For major features, open an issue first to discuss design.
-- This file is intentionally short, focused on quick onboarding without exhaustive policy text.
