@@ -100,8 +100,10 @@ $ go test ./...
 CLI-Processing-Tool/
 │
 ├── main.go          # CLI entrypoint and processing pipeline
-├── processor.go     # transformation functions
+├── ├── processor/
+│   └── processor.go # transformation functions
 ├── main_test.go     # unit tests
+├── go.mod           # go module file
 ├── sample.txt       # example input
 ├── result.txt       # example output
 ├── CONTRIBUTING.md
