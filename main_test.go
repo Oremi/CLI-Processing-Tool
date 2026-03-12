@@ -1,6 +1,7 @@
 package main
 
 import (
+	f "github.com/Oremi/CLI-Processing-Tool/processor"
 	"strings"
 	"testing"
 )
@@ -9,13 +10,13 @@ import (
 
 func RunFullProcessor(input string) string {
 	result := strings.Fields(input)
-	result = DecimalConversion(result)
-	result = CaseConversion(result)
-	result = VowelHandler(result)
+	result = f.DecimalConversion(result)
+	result = f.CaseConversion(result)
+	result = f.VowelHandler(result)
 
 	newResult := strings.Join(result, " ")
-	newResult = PunctuationHandler(newResult)
-	newResult = QuoteHandler(newResult)
+	newResult = f.PunctuationHandler(newResult)
+	newResult = f.QuoteHandler(newResult)
 
 	return newResult
 }
