@@ -15,7 +15,7 @@ func RunFullProcessor(input string) string {
 
 	newResult := strings.Join(result, " ")
 	newResult = PunctuationHandler(newResult)
-	newResult = QouteHandler(newResult)
+	newResult = QuoteHandler(newResult)
 
 	return newResult
 }
