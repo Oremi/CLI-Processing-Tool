@@ -166,14 +166,22 @@ func PunctuationHandler(text string) string {
 	return b.String()
 }
 
-func QuoteHandler(s string) string {
+unc QuoteHandler(s string) string {
 
-	//  Fixes Quotes Through This Process: "' word '" -> "'word'"
+	//  Fixes Quotes Through This Process: ' word ' -> 'word'
 	parts := strings.Split(s, "'")
 	for i := 1; i < len(parts); i += 2 {
 		parts[i] = strings.TrimSpace(parts[i]) // Strip spaces inside quotes
 	}
 	s = strings.Join(parts, "'")
+
+	
+	//  Fixes Quotes Through This Process: " word " -> "word"
+	parts = strings.Split(s, "\"")
+	for i := 1; i < len(parts); i += 2 {
+		parts[i] = strings.TrimSpace(parts[i]) // Strip spaces inside quotes
+	}
+	s = strings.Join(parts, "\"")
 
 	return strings.Join(strings.Fields(s), " ")
 }
